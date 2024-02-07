@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Launch h7-boot",
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/build/h7-boot.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32h7x.cfg"
+            ],
+            "runToMain": true,
+            "preLaunchTask": "make all"
+        }
+    ]
+}
